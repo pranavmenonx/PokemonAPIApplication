@@ -1,0 +1,124 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Local Pokedex</title>
+	<script>
+		function showData() {
+			document.getElementById("pokeball").style.display = "none";
+			document.getElementById("data").style.display = "block";
+		}
+	</script>
+</head>
+
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-image: url("https://images5.alphacoders.com/497/497664.png");
+        background-size: cover;
+        background-position: center center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 36px;
+		color: crimson;
+		text-shadow: 2px 2px gray;
+	}
+
+	h2 {
+		font-size: 24px;
+		color: darkslategray;
+		margin-bottom: 10px;
+	}
+
+	a {
+		color: crimson;
+		text-decoration: none;
+		transition: color 0.2s ease-in-out;
+	}
+
+	a:hover {
+		color: firebrick;
+	}
+
+	hr {
+		border: none;
+		height: 1px;
+		background-color: lightgray;
+		margin: 20px 0;
+	}
+
+	.container {
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 20px;
+		padding: 20px;
+		margin: 50px auto;
+		max-width: 800px;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	}
+
+	.pokeball {
+		cursor: pointer;
+		display: block;
+		margin: auto;
+		width: 200px;
+		height: 200px;
+		background-image: url("https://i.pinimg.com/originals/09/da/92/09da926c2b94d95008a9e3b2f60bfdd3.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		animation: shake 0.5s ease-in-out;
+		animation-iteration-count: 1000;
+		animation-fill-mode: forwards;
+	}
+
+	.data {
+		display: none;
+	}
+
+	@keyframes shake {
+		0% {
+			transform: translateX(0);
+		}
+		25% {
+			transform: translateX(-10px) rotateZ(-20deg);
+		}
+		50% {
+			transform: translateX(0) rotateZ(0);
+		}
+		75% {
+			transform: translateX(10px) rotateZ(20deg);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+
+</style>
+
+<body>
+	<div class="container">
+		<h1>Pokemon</h1>
+		<div>
+			<p>Click on the Pokeball!!</p>
+			<div id="pokeball" class="pokeball" onclick="showData()"></div>
+			<div id="data" class="data">
+				<strong>Name: </strong><%- name %><br>
+				<strong>LVL: </strong><%- rating %><br>
+				<strong>Background Information: </strong><br>
+				<%- background %><br><hr>
+			</div>
+		</div>
+		<a href="/">HOME</a>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Destruction</title>
+</head>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-image: url("https://i.pinimg.com/originals/27/6d/89/276d892608afb66dd2f4e7b290500e70.png");
+		
+        background-size: cover;
+        background-position: center center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 36px;
+		color: crimson;
+		text-shadow: 2px 2px gray;
+	}
+
+	h2 {
+		font-size: 24px;
+		color: darkslategray;
+		margin-bottom: 10px;
+	}
+
+	a {
+		color: crimson;
+		text-decoration: none;
+		transition: color 0.2s ease-in-out;
+	}
+
+	a:hover {
+		color: firebrick;
+	}
+
+	hr {
+		border: none;
+		height: 1px;
+		background-color: lightgray;
+		margin: 20px 0;
+	}
+
+	.container {
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 20px;
+		padding: 20px;
+		margin: 50px auto;
+		max-width: 800px;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	}
+
+	input[type="reset"], input[type="submit"] {
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #FFF;
+        text-shadow: 2px 2px 5px #000;
+        background-color: orangered;
+    }
+
+    input[type="reset"]:hover, input[type="submit"]:hover {
+        background-color: red;
+    }
+
+</style>
+<body>
+	<div class="container">
+
+		<h1>Destruction of All Pokemon</h1>
+		
+		<form action="/remove" method="post">
+			<input type="submit" value="Remove all pokemon">
+		</form>
+		<hr>
+		<a href="/">HOME</a>
+	</div>
+</body>
+
+</html>

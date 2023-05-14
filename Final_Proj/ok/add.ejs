@@ -1,0 +1,133 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Add to Pokedex</title>
+
+    <script>
+		function confirmSubmit() {
+			var confirmed = window.confirm("Are you sure you want to submit the Pokemon? This action cannot be undone.");
+			if (confirmed) {
+				return true; 
+			} else {
+                event.preventDefault()
+				return false; 
+			}
+		}
+	</script>
+
+
+</head>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-image: url("https://wallpaperaccess.com/full/3544243.jpg");
+        background-size: cover;
+        background-position: center center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 36px;
+		color: orange;
+		text-shadow: 2px 2px gray;
+	}
+
+	h2 {
+		font-size: 24px;
+		color: darkslategray;
+		margin-bottom: 10px;
+	}
+
+	a {
+		color: crimson;
+		text-decoration: none;
+		transition: color 0.2s ease-in-out;
+	}
+
+	a:hover {
+		color: firebrick;
+	}
+
+	hr {
+		border: none;
+		height: 1px;
+		background-color: lightgray;
+		margin: 20px 0;
+	}
+
+    .container {
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 20px;
+		padding: 20px;
+		margin: 50px auto;
+		max-width: 800px;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	}
+
+    input[type="text"], textarea {
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    input[type="reset"], input[type="submit"] {
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #FFF;
+        text-shadow: 2px 2px 5px #000;
+        background-color: orangered;
+    }
+
+    input[type="reset"]:hover, input[type="submit"]:hover {
+        background-color: red;
+    }
+
+
+
+
+</style>
+<body>
+    <div class="container">
+        <h1>Add Pokemon?</h1>
+
+        <form action="/add" method="post">
+            
+            <div style="border: 1px solid black; padding: 10px;">
+               
+                <Strong> Name: </Strong>
+                <input type="text" name="name" required> &nbsp
+             
+                <Strong> LVL: </Strong>
+                <input type="text" name="rating" min="0" max="100" required><br><br>
+                
+                <Strong> Additional information: </Strong> <br>
+                <textarea id="background" name = "background" rows="6" cols = "80"></textarea>
+    
+            </div>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Add Pokemon" onclick="confirmSubmit()">
+              
+          </form><br><hr>
+          <a href="/">Home Page</a>
+
+    </div>
+	
+
+</body>
+
+</html>

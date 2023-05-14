@@ -1,0 +1,163 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Pokemon List</title>
+</head>
+
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	#video-background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		min-width: 100%;
+		min-height: 100%;
+		z-index: -100;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 36px;
+		color: crimson;
+		text-shadow: 2px 2px gray;
+	}
+
+	h2 {
+		font-size: 24px;
+		color: darkslategray;
+		margin-bottom: 10px;
+	}
+
+	a {
+		color: crimson;
+		text-decoration: none;
+		transition: color 0.2s ease-in-out;
+	}
+
+	a:hover {
+		color: firebrick;
+	}
+
+	hr {
+		border: none;
+		height: 1px;
+		background-color: lightgray;
+		margin: 20px 0;
+	}
+
+    table {
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: blue;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: lightgray;
+    }
+
+    tr:hover {
+        background-color: lightskyblue;
+    }
+
+	.parent-container {
+		position: absolute;
+		right:300px;
+	}
+
+	.container1 {
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 20px;
+		padding: 20px;
+		width: 300px;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		max-height: 500px;
+		margin-bottom: 0;
+		float: right;
+		clear: both;
+	}
+
+	.container2 {
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 20px;
+		padding: 20px;
+		width: 300px;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		overflow: auto;
+		max-height: 500px;
+		margin-bottom: 0;
+		float: right;
+		clear: both;
+	}
+
+	.container3 {
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 20px;
+		padding: 20px;
+		width: 300px;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		max-height: 500px;
+		margin-top: 0;
+		float: right;
+		clear: both;
+	}
+</style>
+
+<body>
+
+	<video autoplay muted loop id="video-background">
+		<source src="https://terpconnect.umd.edu/~pmenon31/Globalvid.mp4" type="video/mp4">
+	</video>
+	<div class="parent-container">
+		<div class="container1">
+		  <h1>Global Pokedex</h1>
+		</div>
+		<div class="container2">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Image</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% for (const pokemon of pokemonDataList) { %>
+					<tr>
+						<td><%= pokemon.name %></td>
+						<td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= pokemon.id %>.png" alt="<%= pokemon.name %>"></td>
+					</tr>
+					<% } %>
+				</tbody>
+			</table>
+		</div>
+		<div class="container3">
+		  <hr>
+		  <a href="/">HOME</a>
+		</div>
+	  </div>
+	  
+</body>
+</html>

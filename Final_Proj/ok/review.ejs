@@ -1,0 +1,104 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Pokedex</title>
+
+
+</head>
+
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-image: url("https://images5.alphacoders.com/126/1262691.jpg");
+        background-size: cover;
+        background-position: center center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 36px;
+		color: crimson;
+		text-shadow: 2px 2px gray;
+	}
+
+	h2 {
+		font-size: 24px;
+		color: darkslategray;
+		margin-bottom: 10px;
+	}
+
+	a {
+		color: crimson;
+		text-decoration: none;
+		transition: color 0.2s ease-in-out;
+	}
+
+	a:hover {
+		color: firebrick;
+	}
+
+	hr {
+		border: none;
+		height: 1px;
+		background-color: lightgray;
+		margin: 20px 0;
+	}
+
+    table {
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: blue;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: lightgray;
+    }
+
+    tr:hover {
+        background-color: lightskyblue;
+    }
+
+    .container {
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 20px;
+		padding: 20px;
+		margin: 50px auto;
+		max-width: 800px;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	}
+
+</style>
+
+<body>
+    <div class="container">
+        <h1>All your Pokemon!</h1>
+        
+        <%- arr %>
+        <br>
+        <br>
+        <hr>
+        
+        <a href="/">HOME</a>
+    </div>
+</body>
+
+</html>
